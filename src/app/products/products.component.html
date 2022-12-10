@@ -1,0 +1,36 @@
+<section style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <div class="row">
+      <div *ngFor="let item of (list | filter: searchText | sortBy: sortOption)" class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+               data-mdb-ripple-color="light">
+            <img src="/assets/images/{{item.image}}" class="w-100" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-3">{{item.title}}</h5>
+            <div class="mt-1 mb-0 text-muted small">
+              <span *ngFor="let tag of item.tags | keyvalue">
+                <span>{{tag.value}}</span>
+                <span> | </span>
+              </span>
+            </div>
+            <h6 class="mb-3">${{item.price}}</h6>
+            <button
+              class="btn btn-primary"
+              type="button"
+              (click)="basicCollapse.toggle()"
+              [attr.aria-expanded]="!basicCollapse.collapsed"
+              aria-controls="collapseExample"
+            >
+              Details
+            </button>
+            <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+              {{item.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

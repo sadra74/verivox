@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row" style="border-top:solid 1px #999; margin: 0px;">
+    <div class="col-lg-4 col-md-12 mt-2">
+      <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-12">
+          <div class="input-group mb-4 mt-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Search Products</div>
+            </div>
+            <input
+              [(ngModel)]="searchText"
+              class="form-control"
+              placeholder="Please enter any product name to search "
+            />
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6 col-sm-12">
+          <div class=" mb-4 mt-2">
+            <select class="form-control" [(ngModel)]="sortOption">
+              <option value="title|asc">Sort By Name (A to Z)</option>
+              <option value="title|desc">Sort By Name (Z to A)</option>
+              <option value="price|lth">Sort By Price (Low to High)</option>
+              <option value="price|htl">Sort By Price (High to Low)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-12">
+      <app-products
+        [sortOption]="sortOption"
+        [searchText]="searchText"
+      ></app-products>    </div>
+  </div>
+</div>
+
+

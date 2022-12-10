@@ -1,0 +1,30 @@
+.portfolio-menu {
+  text-align: center;
+}
+.portfolio-menu ul li {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 11px 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+  cursor: pointer;
+  -webkit-transition: all 05s ease;
+  -moz-transition: all 05s ease;
+  -ms-transition: all 05s ease;
+  -o-transition: all 05s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio-menu ul {
+  text-align: center;
+}
+
+.portfolio-item {
+  /*width:100%;*/
+}
+.portfolio-item .item {
+  /*width:303px;*/
+  float: left;
+  margin-bottom: 10px;
+}
